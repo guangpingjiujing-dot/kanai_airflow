@@ -1,0 +1,81 @@
+version: 2
+
+sources:
+  - name: ecommerce_system
+    description: "ECサイトのトランザクションデータとマスタデータ"
+    database: taitechWarehouseTraning
+    schema: ecommerce_system
+    tables:
+      - name: categories
+        description: "商品カテゴリマスタ"
+        columns:
+          - name: category_id
+            description: "カテゴリID"
+          - name: name
+            description: "カテゴリ名"
+
+      - name: customers
+        description: "顧客マスタ"
+        columns:
+          - name: customer_id
+            description: "顧客ID"
+          - name: full_name
+            description: "顧客名"
+          - name: email
+            description: "メールアドレス"
+          - name: city
+            description: "居住都市"
+          - name: created_at
+            description: "登録日時"
+
+      - name: products
+        description: "商品マスタ"
+        columns:
+          - name: product_id
+            description: "商品ID"
+          - name: name
+            description: "商品名"
+          - name: category_id
+            description: "カテゴリID"
+          - name: price
+            description: "価格"
+          - name: created_at
+            description: "登録日時"
+
+      - name: orders
+        description: "注文トランザクション"
+        columns:
+          - name: order_id
+            description: "注文ID"
+          - name: customer_id
+            description: "顧客ID"
+          - name: order_date
+            description: "注文日時"
+          - name: status
+            description: "注文ステータス"
+
+      - name: order_items
+        description: "注文明細"
+        columns:
+          - name: order_id
+            description: "注文ID"
+          - name: product_id
+            description: "商品ID"
+          - name: quantity
+            description: "数量"
+          - name: unit_price
+            description: "単価（注文時点の価格）"
+
+      - name: payments
+        description: "支払いトランザクション"
+        columns:
+          - name: payment_id
+            description: "支払いID"
+          - name: order_id
+            description: "注文ID"
+          - name: amount
+            description: "支払い金額"
+          - name: payment_date
+            description: "支払い日時"
+          - name: method
+            description: "支払い方法"

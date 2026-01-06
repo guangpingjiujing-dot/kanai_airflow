@@ -9,7 +9,7 @@ dbt_sample_project:
       server: "{{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
       port: 1433
       database: "taitechWarehouseTraning"
-      schema: dbo
+      schema: dbt
       threads: 4
       authentication: ServicePrincipal
       tenant_id: "{{ env_var('AZURE_TENANT_ID') }}"

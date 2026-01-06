@@ -8,7 +8,7 @@ dbt_sample_project:
       driver: "ODBC Driver 18 for SQL Server"
       server: "{{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
       port: 1433
-      database: "dbt"
+      database: "taitechWarehouseTraning"
       schema: dbo
       threads: 4
       authentication: ServicePrincipal

@@ -7,4 +7,3 @@ SELECT
     ORDER BY scheduled_at, lesson_id
   ) AS lesson_seq
 FROM [taitechWarehouseTraning].[learning_management_system].[lessons]
-ORDER BY enrollment_id, lesson_seq;
